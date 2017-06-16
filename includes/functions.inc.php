@@ -178,16 +178,18 @@ function insertActivity ($activityTitle, $activityDesc, $activitysDate, $activit
 	
 	//Store activity metadata
 	$activitySql = "INSERT INTO ".ACTIVITY_TABLE." (title, description, startDate, endDate, pCode, activityStatus, activityType, fundingStatus, fundingType, fundingAmount, focalPoint, classificationCode, subclassification_id, activityThemes_id, currencyCode, regDate ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
-	
+	//echo $activitySql;
 	$activityStmt = $conn->prepare($activitySql);
 	$activityStmt->bind_param("ssssssssssssiis", $activityTitle, $activityDesc, $activitysDate, $activityeDate, 
 	$code, $activityStatus, $activityType, $fundingStatus, $fundingType, $fundingAmount, $focalPoint, $activityClassification, $activitySubClassification, $activityTheme, $fundingCurrency);
+	
 	if ($activityStmt->execute() === TRUE) {
 		$message = "Activity record created successfully.";
 		//get inserted activity id
 		$activity_id = $activityStmt->insert_id;
 	} else {
 		$message = "Error: <br>" . $activityStmt->error;
+		//echo "Errorss: <br>" . $activityStmt->error;
 		$conn->rollback();
 		// exit or throw an exception
 		//die();

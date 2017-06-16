@@ -3071,7 +3071,7 @@ if($_POST && isPostedDataValid()){
 							</div>
 							</form>
 						</div> 			  
-						<div class="col-md-4">
+						<div class="col-md-4 hidden">
 							<div id="message-container" class="alert alert-info"></div>
 							
 							<!--<div id="message-container" class="modal fade" role="dialog">

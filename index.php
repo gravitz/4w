@@ -27,7 +27,7 @@
 		<div id='wrapper'>
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded" >
 			<div class="container-fullwidth" >
-				<div class="row xpanel xpanel-default" style="display: none">
+				<div class="row xpanel xpanel-default">
 					<a class="navbar-brand" title="Home" href="index.php">
 						<img src="style/images/logo.png" class="d-inline-block align-top img-responsive img-rounded" alt="Home" title="Home" />
 					</a>

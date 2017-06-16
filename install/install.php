@@ -1,4 +1,10 @@
 <?php
+/*
+	* Currently not in use
+	* To set up the database scheme, run dpd4w.sql into MySQL instead
+*/
+
+
 require ("config.inc.php");
 
 //*************************  DROP DATABASE
